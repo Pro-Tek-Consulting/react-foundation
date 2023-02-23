@@ -17,8 +17,8 @@ class Counter extends Component {
 	render() {
 		return (
 			<div>
-				<span> This is a counter.</span>
-				<h1> Current Count: {this.state.currentCount}</h1>
+				<h1> This is a counter.</h1>
+				<h3> Current Count: {this.state.currentCount}</h3>
 				<button onClick={this.addHandleClick}>Click Me to Increase</button>
 				<button onClick={this.decreaseHandleClick}>Click Me to Decrease</button>
 				{this.state.name && <h4>Last updated by {this.state.name}</h4>}
