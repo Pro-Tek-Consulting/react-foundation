@@ -1,10 +1,12 @@
 const HelloMsg = (props) => {
 	const { user } = props;
 	return (
-		<h1>
-			Hello, {user.firstName}
-			{user.lastName}
-		</h1>
+		<div>
+			<h1>
+				Hello, {user.firstName}
+				{user.lastName}
+			</h1>
+		</div>
 	);
 };
 export default HelloMsg;
