@@ -17,28 +17,24 @@ class Counter extends Component {
   componentDidMount() {
     setTimeout(() => this.setState({ name: "Rohit" }), 10000);
   }
-  shouldComponentUpdate(nextProps, nextState) {
-    // Rendering the component only if
-    // passed props value is changed
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   // Rendering the component only if
+  //   // passed props value is changed
 
-    if (nextState.currentCount > 7) {
-      return false;
-    } else {
-      return true;
-    }
-  }
+  //   if (nextState.currentCount > 7) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // }
 
-  componentDidUpdate() {
-    alert("Updated");
-  }
+  componentDidUpdate() {}
 
-  componentWillUnmount() {
-    alert("Component will unmount");
-  }
+  componentWillUnmount() {}
 
   render() {
     let counterClasses = "myClasess";
-    return (
+    return this.state.currentCount === 20 ? null : (
       <div className={counterClasses}>
         <span> This is a counter.</span>
         <h1> Current Count: {this.state.currentCount}</h1>
@@ -50,14 +46,11 @@ class Counter extends Component {
 }
 
 const FunCounter = (props) => {
-  return (
-    <div>
-      <span> This is a counter.</span>
-      <h1> Current Count: {props.startAt}</h1>
-      <button>Click Me</button>
-      {this.state.name && <span>Last updated by {this.state.name}</span>}
-    </div>
-  );
+  const { count } = props;
+  if (count) {
+    return <div>{count && <h1>Messages: {count}</h1>}</div>;
+  }
+  return null;
 };
 
 export default Counter;
