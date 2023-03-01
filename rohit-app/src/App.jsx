@@ -1,5 +1,6 @@
 import "./App.css";
 import HelloMsg from "./components/HelloMsg";
+import Listing from "./components/Listing";
 
 function App() {
   const data = {
@@ -8,6 +9,15 @@ function App() {
     gender: "Male",
     age: 30,
   };
+
+  const posts = [
+    { id: 1, title: "Hello World", content: "Welcome to learning React!" },
+    {
+      id: 2,
+      title: "Installation",
+      content: "You can install React from npm.",
+    },
+  ];
 
   const PersonTable = (props) => {
     const { data } = props;
@@ -42,6 +52,7 @@ function App() {
       <Link url="yahoo.com">Yahoo</Link>
       <Link url="bing.com">Bing</Link>
       <br />
+      <Listing data={posts} />
     </div>
   );
 
