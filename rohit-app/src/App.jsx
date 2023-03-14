@@ -1,6 +1,7 @@
 import "./App.css";
 import HelloMsg from "./components/HelloMsg";
 import Listing from "./components/Listing";
+import RegistrationForm from "./components/RegistrationForm";
 
 function App() {
   const data = {
@@ -80,6 +81,7 @@ function App() {
       <Link url="bing.com">Bing</Link>
       <br />
       <Listing data={posts} />
+      <RegistrationForm />
     </div>
   );
 

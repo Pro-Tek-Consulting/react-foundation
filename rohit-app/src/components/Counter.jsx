@@ -1,5 +1,6 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from "react";
+import PropTypes from "prop-types"
 
 class Counter extends Component {
   constructor(props) {
@@ -54,3 +55,8 @@ const FunCounter = (props) => {
 };
 
 export default Counter;
+
+
+Counter.propType = {
+  startAt: PropTypes.number.isRequired
+}
